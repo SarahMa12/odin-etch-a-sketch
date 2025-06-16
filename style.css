@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: flex;
+    width: 550px;
+    height: 550px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
