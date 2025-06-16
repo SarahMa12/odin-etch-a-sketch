@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swa);
+
 * {
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
 }
 
@@ -6,17 +9,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+}
+
+.title {
+    font-size: 40px;
+    margin: 40px;
 }
 
 .options {
     display: flex;
     flex-direction: column;
+    gap: 26px;
+}
+
+button {
+    padding: 10px;
+}
+
+.range-display {
+    margin-bottom: -16px;
 }
 
 .grid-container {
     display: flex;
-    width: 550px;
-    height: 550px;
+    width: 500px;
+    height: 500px;
     flex-wrap: wrap;
     flex-shrink: 0;
+}
+
+.cell {
+    border: 1px solid black;
+    box-sizing: border-box;
 }
