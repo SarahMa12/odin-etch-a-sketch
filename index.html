@@ -6,23 +6,25 @@
         <title>Odin Etch-a-Sketch</title>
     </head>
     <body>
-        <div class="title">Etch-a-Sketch</div>
-        <div class="body">
-            <div class="options">
-                <input type="color" class="color-picker">
-                <button class="color">Color Mode</button>
-                <button class="rainbow">Rainbow Mode</button>
-                <button class="eraser">Eraser</button>
-                <button class="clear">Clear</button>
-                <button class="toggle-grid">Toggle Grid</button>
-                <div class="range-options">
-                    <input type="number" class="range-input">
-                    <div class="range-display"></div>
+        <div class="container">
+            <div class="title">Etch-a-Sketch</div>
+            <div class="body">
+                <div class="options">
+                    <input type="color" class="color-picker">
+                    <button class="button-mode selected" id="color">Color Mode</button>
+                    <button class="button-mode" id="rainbow">Rainbow Mode</button>
+                    <button class="button-mode" id="eraser">Eraser</button>
+                    <button class="clear">Clear</button>
+                    <button class="toggle-grid">Toggle Grid</button>
+                    <div class="range-options">
+                        <input type="number" class="range-input">
+                        <div class="range-display"></div>
+                    </div>
+                    <input type="range" min="1" max="100" class="slider" value="32">
                 </div>
-                <input type="range" min="1" max="100" class="slider" value="32">
+                <div class="grid-container"></div>
             </div>
-            <div class="grid-container">
-            </div>
+            <div class="footer">Created by Sarah Ma · <a href="https://github.com/SarahMa12" target="_blank">GitHub</a> · For The Odin Project</div>
         </div>
         <script src="script.js" defer></script>
     </body>

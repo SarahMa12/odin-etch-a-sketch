@@ -2,19 +2,8 @@ const rangeDisplay = document.querySelector(".range-display");
 const slider = document.querySelector(".slider");
 const gridContainer = document.querySelector(".grid-container");
 const colorPicker = document.querySelector(".color-picker");
-const toggleGrid = document.querySelector(".toggle-grid");
 
-toggleGrid.addEventListener("click", () => {
-    const cells = document.querySelectorAll(".cell");
-    cells.forEach((cell) => {
-        if(cell.style.border == "none") {
-            cell.style.border = "1px solid black";
-        } else {  
-            cell.style.border = "none";
-        }
-    });
-});
-
+let currentMode = "color";
 let currentColor = colorPicker.value;
 
 colorPicker.addEventListener("input", () => {
@@ -40,7 +29,16 @@ function createGrid(dim) {
         cell.style.height = `${500 / dim}px`;
         gridContainer.appendChild(cell);
         cell.addEventListener("mouseover", () => {
-            cell.style.backgroundColor = `${currentColor}`;
+            if(currentMode == "color") {
+                cell.style.backgroundColor = currentColor;
+            } else if(currentMode == "eraser") {
+                cell.style.backgroundColor = "white";
+            } else if(currentMode == "rainbow") {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                cell.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            }
         });
     }
 }
@@ -60,26 +58,35 @@ rangeInput.addEventListener("input", () => {
     createGrid(dim);
 });
 
-const color = document.querySelector(".color");
+const buttonModes = document.querySelectorAll(".button-mode");
 
-color.addEventListener("click", () => {
-    currentColor = colorPicker.value;
-});
+buttonModes.forEach((button) => {
+    button.addEventListener("click", () => {
+        currentMode = button.id;
 
-const rainbow = document.querySelector(".rainbow");
+        buttonModes.forEach((btn) => {
+            btn.classList.remove("selected");
+        });
 
-rainbow.addEventListener("click", () => {
-
-});
-
-const eraser = document.querySelector(".eraser");
-
-eraser.addEventListener("click", () => {
-    currentColor = "white";
+        button.classList.add("selected");
+    });
 });
 
 const clear = document.querySelector(".clear");
 
 clear.addEventListener("click", () => {
     createGrid(dim);
+});
+
+const toggleGrid = document.querySelector(".toggle-grid");
+
+toggleGrid.addEventListener("click", () => {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+        if(cell.style.border == "none") {
+            cell.style.border = "1px solid black";
+        } else {  
+            cell.style.border = "none";
+        }
+    });
 });
