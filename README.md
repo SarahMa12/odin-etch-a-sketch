@@ -1,4 +1,6 @@
 # Odin Etch-a-Sketch
+Mini project done for The Odin Project Foundations course. 
+Works like a sketchpad/Etch-A-Sketch.
 
 ## Features
 - Adjustable grid size (1–100)
