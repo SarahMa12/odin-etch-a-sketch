@@ -1,9 +1,6 @@
 # Odin Etch-a-Sketch
 A brower-based drawing grid inspired by the Etch-a-Sketch toy, created using HTML, CSS, and JavaScript.
 
-## Live Demo
-[Click here to view the live preview](https://sarahma12.github.io/odin-etch-a-sketch/)
-
 ## Overview
 This project is part of [The Odin Project](https://www.theodinproject.com/dashboard) Foundations curriculum. It allows users to draw on a grid by hovering over squares. It was built to practice DOM manipulation and even handling with JavaScript.
 
@@ -15,7 +12,10 @@ This project is part of [The Odin Project](https://www.theodinproject.com/dashbo
 - Clear/reset button
 - Toggle gridlines
 
-## Build WIth
+## Live Demo
+[Click here to view the live preview](https://sarahma12.github.io/odin-etch-a-sketch/)
+
+## Built WIth
 - HTML
 - CSS
 - JavaScript
