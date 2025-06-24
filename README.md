@@ -1,8 +1,8 @@
 # Odin Etch-a-Sketch
-A brower-based drawing grid inspired by the Etch-a-Sketch toy, created using HTML, CSS, and JavaScript.
+A browser-based drawing grid inspired by the Etch-a-Sketch toy, created using HTML, CSS, and JavaScript.
 
 ## Overview
-This project is part of [The Odin Project](https://www.theodinproject.com/dashboard) Foundations curriculum. It allows users to draw on a grid by hovering over squares. It was built to practice DOM manipulation and even handling with JavaScript.
+This project is part of [The Odin Project](https://www.theodinproject.com/dashboard) Foundations curriculum. It allows users to draw on a grid by hovering over squares. It was built to practice DOM manipulation and event handling with JavaScript.
 
 ## Features
 - Adjustable grid size (1–100)
@@ -23,5 +23,5 @@ This project is part of [The Odin Project](https://www.theodinproject.com/dashbo
 ## What I Learned
 - DOM manipulation
 - Dynamic element creation
-- CSS layout and styling (flexboxes)
+- CSS layout and styling (Flexbox)
 - Event listeners and interactive UI behavior
